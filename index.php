@@ -4,8 +4,9 @@
 
 <head>
 	<?php
-	include("head.php")
+	include("head.php");
 	?>
+	
 	<title>GGSIP University USS ACM Student Chapter</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
@@ -18,7 +19,7 @@
 <body>
 	<!-- nav bar -->
 	<?php
-	include("header.php")
+	include("header.php");
 	?>
 	<!-- nav-bar end -->
 	<!-- hero Section -->
@@ -26,22 +27,22 @@
 		<div class="swiper-container" id="myCarousel">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-1-mobile.JPG" data-background="./assets/images/carousel-img-1.jpeg"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-1-mobile.jpg" data-background="./upload/hmpg-img/carousel-img-1.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-2-mobile.JPG" data-background="./assets/images/carousel-img-2.jpeg"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-2-mobile.png" data-background="./upload/hmpg-img/carousel-img-2.jpeg"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-3-mobile.JPG" data-background="./assets/images/carousel-img-3.JPG"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-3-mobile.jpg" data-background="./upload/hmpg-img/carousel-img-3.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-4-mobile.JPG" data-background="./assets/images/carousel-img-4.JPG"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-4-mobile.png" data-background="./upload/hmpg-img/carousel-img-4.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-5-mobile.JPG" data-background="./assets/images/carousel-img-5.JPG"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-5-mobile.png" data-background="./upload/hmpg-img/carousel-img-5.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-6-mobile.JPG" data-background="./assets/images/carousel-img-6.JPG"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-6-mobile.png" data-background="./upload/hmpg-img/carousel-img-6.png"></div>
 				</div>
 
 				<div class="swiper-button-next"></div>
@@ -68,10 +69,10 @@
 				<img src="./assets/images/aboutUs-icon.png" alt="" class="w-100" />
 			</div>
 		</div>
-		<div class="col-sm-6 col-9 mx-auto mt-3 pe-sm-5 align-self-center">
+		<div class="col-sm-6 col-9 mx-auto px-0 mt-3 pe-sm-5 align-self-center">
 			<div class="text">
 				<h2 class="mb-4 display-4 fw-bolder text-center text-md-start">
-					About <span class="text-blue">Our Chapter</span>
+					About <span class="text-head">Our Chapter</span>
 				</h2>
 				<p class="text-secondary about-text">
 					GGSIP University USS ACM Student Chapter is an official student body incepted in 2019 under the University
@@ -122,7 +123,7 @@
 		</div>
 		<div class="tag">
 			<div class="bloghead">
-				<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-blue"> Blogs</span></h2>
+				<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-head"> Blogs</span></h2>
 			</div>
 			<div class="b-container" id="threeBlogsRow"></div>
 			<div class="py-3 mt-2 d-sm-flex justify-content-sm-center">
@@ -174,194 +175,113 @@
 				</div>\
 				<img src="' +
 							row.Image +
-							'" class="blog-img" style="object-fit:contain;"/>\
+							'" class="blog-img" />\
 			</div>\
 			<div>';
 					}
 				},
 			});
 		});
+        function displayFaculty(facultyMembers) {
+            let div = document.getElementById("officeList");
+            let html = '';
+            for(let i = 0 ; i < facultyMembers.length; i++) {
+                html += `
+                      <div class="profile-card col-md-4 col-sm-6">
+                        <div class="img">
+                          <img
+                            src="/${facultyMembers[i].image}"
+                          />
+                        </div>
+                        <div class="caption">
+                          <h3>${facultyMembers[i].name}</h3>
+                          <p>${facultyMembers[i].designation}</p>
+                        </div>
+                      </div>`;
+            }
+            // div.innerHTML = html;
+        }
+        function displayTeam(teamMembers) {
+            let div = document.getElementById("teamList");
+            let html = ''
+            for(let i = 0 ; i < teamMembers.length; i++) {
+                html +=`
+                      <div class="profile-card col-md-4 col-sm-6">
+                        <div class="img">
+                          <img
+                            src="./${teamMembers[i].image}"
+                          />
+                        </div>
+                        <div class="caption">
+                          <h3>${teamMembers[i].name}</h3>
+                          <p>${teamMembers[i].designation}</p>
+                          <div class="social-links"> `
+                if(teamMembers[i].linkendin) {
+                    html += `<a href="${teamMembers[i].linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>`;
+                } 
+                if(teamMembers[i].github) {
+                    html += `<a href="${teamMembers[i].github}" target="_blank"><i class="fab fa-github"></i></a>`;
+                } 
+                if(teamMembers[i].instagram) {
+                    html += `<a href="${teamMembers[i].instagram}" target="_blank"><i class="fab fa-instagram"></i></a>`;
+                } 
+                html += "</div> </div> </div>";
+            }
+            // div.innerHTML = html;
+        }
+        async function getTeamData(year) {
+            let url = `./admin/adminPanel/faqadmin/teams/api.php/?q=readMember&year=${year}`
+            const response = await fetch(url);
+            let array = await response.json();
+            let teamMember = [];
+            let facultyMember = [];
+            for(let i = 0 ; i < array.length; i++) {
+                if(array[i].category === 'Office-Bearers') {
+                    teamMember.push(array[i]);
+                }
+                if(array[i].category === 'Faculty') {
+                    facultyMember.push(array[i]);
+                }
+            }
+            return [facultyMember, teamMember];
+        }
+        getTeamData(2023).then(([facultyMembers, teamMembers]) => { 
+            displayFaculty(facultyMembers);
+            displayTeam(teamMembers);
+        });
 	</script>
 	<!-- ******************************blog section end***************************************** -->
 	<!-- *******************************************our team************* -->
-	<section class="tag container-fluid">
-		<div class="">
-			<h2 class="my-4 display-4 fw-bolder text-center">Office<span class="text-blue"> Bearers</span></h2>
-		</div>
-	 <div class="row justify-content-center">
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/deanSirSquared.jpeg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Prof. Pravin Chandra</h3>
-          <p>Dean, USICT</p>
-        </div>
-      </div>
-      <!-- <div class="gap"></div> -->
-	  <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/rahulsir.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Dr. Rahul Johari</h3>
-          <p>Branch Mentor, ACM USS</p>
-        </div>
-      </div>
-	  <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/ruchi-sehrawat.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Dr. Ruchi Sehrawat</h3>
-          <p>Branch Mentor, ACM USS</p>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/jaspreeti-singh.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Dr. Jaspreeti Singh</h3>
-          <p>Branch Mentor, ACM USS</p>
-        </div>
-      </div>
-	 </div>
+    <?php 
+    include_once 'officebearer.php';
+    ?>
 
-
-
-	 <div class="row justify-content-center">
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/harshGoyal.png"
-          />
-        </div>
-        <div class="caption">
-          <h3>Harsh Goyal</h3>
-          <p>Chair</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/harsh-goyal-195255b9/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/Anuj.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Anuj Talwar</h3>
-          <p>Vice Chair</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/anuj-talwar/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/TarunSquared.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Tarun</h3>
-          <p>Secretary</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/tarun-037091194" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/KaranSquared.jpeg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Karan Deep Singh</h3>
-          <p>Treasurer</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/karan-deep/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/MoulikSquared.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Moulik Agrawal</h3>
-          <p>Web Chair</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/moulik-agrawal/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/anurag.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Anurag Parashar</h3>
-          <p>Membership Chair</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/anurag-parashar/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-	</div>
-    
-
-
-		<div class="py-3 mt-2 d-flex justify-content-sm-center">
-			<div class="col-lg-2 col-md-4 col mb-2 mt-4 mt-lg-0">
-				<a id="meet-the-team-btn" href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
-				</div>
-		</div>
-		
-		<!-- </div> -->
-	</section>
 	<!-- *****************************our team end************************************************** -->
 	<!-- socail bar******************************* -->
 	<div class="social-btns tag">
 		<div class="try1">
-			<a class="btn facebook" href="https://facebook.com/acmusict" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a class="btn facebook" href="https://usict.acm.org/facebook" target="_blank"><i class="fa fa-facebook"></i></a>
 			<div class="write" id="wrete">
 				<h1 class="sob-heading">700+</h1>
 				<p class="gratext">Facebook Followers</p>
 			</div>
 		</div>
 		<div class="try1">
-			<a class="btn linkedin" href="https://linkedin.com/company/acmusict" target="_blank"><i class="fab fa fa-linkedin"></i></a>
+			<a class="btn linkedin" href="https://usict.acm.org/linkedin" target="_blank"><i class="fab fa fa-linkedin"></i></a>
 			<div class="write" id="wrete">
 				<h1 class="sob-heading">6000+</h1>
 				<p class="gratext">LinkedIn Reach</p>
 			</div>
 		</div>
 		<div class="try1">
-			<a class="btn instagram" href="https://instagram.com/acmusict/" target="_blank"><i class=" fa fa fa-instagram"></i></a>
+			<a class="btn instagram" href="https://usict.acm.org/instagram" target="_blank"><i class=" fa fa fa-instagram"></i></a>
 			<div class="write" id="wrete">
-				<h1 class="sob-heading">450+</h1>
+				<h1 class="sob-heading">550+</h1>
 				<p class="gratext">Instagram Followers</p>
 			</div>
 		</div>
 		<div class="try1">
-			<a class="btn discord" href="https://discord.com/invite/fbAJs85rzT" target="_blank"><i class=" fab fa-discord"></i></a>
+			<a class="btn discord" href="https://usict.acm.org/discord" target="_blank"><i class=" fab fa-discord"></i></a>
 			<div class="write" id="wrete">
 				<h1 class="sob-heading">600+</h1>
 				<p class="gratext">Discord Members</p>
@@ -370,8 +290,9 @@
 		<div class="try1">
 			<a class="btn skype"><i class="fa fa fa-child"></i></a>
 			<div class="write" id="wrete">
-				<h1 class="sob-heading">1500+</h1>
-				<p class="gratext">Connected Students</p>
+			<?php include './visitorCounter.php'?>
+				<h1 class="sob-heading"><?php echo  $visitor_count?>+</h1>
+				<p class="gratext">Monthly Visitors</p>
 			</div>
 		</div>
 
@@ -387,8 +308,8 @@
 	<!--  footer ends -->
 
 	<!-- Swiper JS -->
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<script src="assets\JS\home_new.js"></script>
-	</body>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets\JS\home_new.js"></script>
+    </body>
 
-</html>
+    </html>

@@ -20,6 +20,8 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import ResetPassword from "../ResetPassword";
+import userImg from "../../assets/img/user.png"
+import "./Avatar.css";
 // reactstrap components
 import {
 	DropdownMenu,
@@ -63,8 +65,7 @@ const AdminNavbar = (props) => {
 											alt="..."
 											src={
 												user?.profilePhoto ||
-												require("../../assets/img/user.png")
-													.default
+												userImg													
 											}
 										/>
 									</span>

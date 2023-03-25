@@ -2,7 +2,7 @@
         <ul style="transform: scale(1.4); transform-origin: top left; z-index: 10;" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -13,14 +13,14 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
                 <a class="nav-link" href=".\index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
-            </li>
+            </li> -->
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <!-- <hr class="sidebar-divider"> -->
 
             <!-- Heading -->
             <!-- <div class="sidebar-heading">
@@ -124,6 +124,47 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Link</span></a>
             </li>
+
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="?table=Certificate">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Certificate</span></a>
+            </li>
+            <!-- <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link" href="?table=invite">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Invite</span></a>
+            </li> -->
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link" href="?table=Utkrisht">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Utkrisht</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link" href="?table=Teams">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Teams</span></a>
+            </li>
+
+           
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link" href="?table=joinus">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Join Us</span></a>
+            
+            <hr class="sidebar-divider">
+                <a class="nav-link" href="?table=Contactus">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Contact Us</span></a>
+                    </li>
+           
 
             <!-- Nav Item - Tables -->
             <!-- <li class="nav-item">

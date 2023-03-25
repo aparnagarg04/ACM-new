@@ -121,7 +121,7 @@
                </div>
                <!--icons-->
 
-               <div class="row d-flex justify-content-center">
+               <div class="row d-flex justify-content-center mobile-view">
                     <!-- <div class="collab-card">
                    <hr class="blue-hr">
                    <div class="card-1"></div>
@@ -780,6 +780,16 @@
                                    <div class="time">2021</div>
                                    <div>
                                         <p>Global Winners, ACM outstanding website</p>
+
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="item left">
+                              <div class="marker multiline"></div>
+                              <div class="content">
+                                   <div class="time">2022</div>
+                                   <div>
+                                        <p>Organized HashTech and 20+ events</p>
 
                                    </div>
                               </div>

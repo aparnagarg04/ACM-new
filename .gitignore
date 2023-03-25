@@ -5,6 +5,8 @@ enviornment.php
 .DS_Store
 forms/responsesfile/*
 .htaccess
+.github
+workspace.code-workspace
 
 # react
 /build
@@ -17,8 +19,10 @@ admin/.DS_Store
 assets/.DS_Store
 .vscode/
 debug.log
-/package.json
 mail-testing
-
+admin/adminPanel/faqadmin/certificate/download
+admin/adminPanel/faqadmin/images
+verify
+upload
 # composer
 vendor
